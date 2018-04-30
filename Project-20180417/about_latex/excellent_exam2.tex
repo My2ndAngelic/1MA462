@@ -1,0 +1,79 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+\usepackage{hyperref}
+\usepackage{verbatim} %% \begin{comment}\end{comment}
+\usepackage{amsmath}
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{1ex}
+\usepackage{listings}
+\usepackage{scrpage2}
+\usepackage{graphicx}
+\pagestyle{scrheadings}
+\ohead{NN}
+
+% My own commands
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\vecc}[1]{\overline{\boldsymbol{#1}}}
+
+\begin{document}
+
+\title{\textbf{Home Exam\\ Linear algebra with Fourier series }}
+\author{NN\\}
+
+\maketitle
+
+\newpage
+
+\section{}Solution vectors $\vect y$ of consistent nonhomogenous system fullfill
+\[B\vect x = \vect c\]
+for $\vect b\not=\vect 0$ with. A space must be open under vector multiplication
+\[A(l\vect x) = \vect d \Leftrightarrow kA\vect y = \vect b \Leftrightarrow k\vect n = \vect b\]
+Which is untrue so the $\vect d$ vectors do not form a subspace of $P^n$
+
+
+
+\section{} A rotation in x-direction adds multiples of z to x.
+\[ \left( \begin{array}{cc}
+1 & 1\\
+0 & 1
+\end{array} \right)\]
+ Since two of the lines lie on the x-axis we can only manipulate the line with such a projection. To get a square with right angle at $(2,2)$ we must move corner $(1,1)$ to $(-1,1)$.
+\[ \left( \begin{array}{cc}
+1 & 1\\
+0 & 1
+\end{array} \right)
+\left( \begin{array}{c}
+2\\
+1
+\end{array} \right)=
+\left( \begin{array}{c}
+0\\
+1
+\end{array} \right) \Rightarrow 3 + a = 0 \Leftrightarrow a = -2
+\]
+The desired is
+\[ \left( \begin{array}{cc}
+1 & x\\
+0 & 1
+\end{array} \right) \]
+
+
+
+\section{}
+The process to find orthogonal sets for $F_2$:
+\[v_1 = 13\]
+\[v_2 = y - \frac{<z,1>}{||1||^2} =x - \frac{1}{2}\int_{-2}^0 udx= x - 0 = x\]
+Best approximation by rotating $u$ on $R_2$:
+\[f \approx proj_{R_{2}}f = c_u + c_2 u + c_3 (z^2-\frac{0}{3})\]
+
+
+
+
+
+\end{document}
+
+
+
+
