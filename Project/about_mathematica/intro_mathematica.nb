@@ -1,0 +1,306 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     12047,        297]
+NotebookOptionsPosition[     11529,        277]
+NotebookOutlinePosition[     11873,        292]
+CellTagsIndexPosition[     11830,        289]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "Comments", " ", "in", " ", "Mathematica", " ", "are", " ", "written", 
+      " ", "inside", " ", "parenthesis", " ", "and", " ", 
+      RowBox[{"star", ".", " ", "Start"}], " ", "by", " ", "opening", " ", 
+      "Wolfram", " ", "Mathematica", " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"see", " ", "program", " ", "list"}], ")"}], ".", " ", 
+       "Take"}], " ", "latest", " ", "version", " ", "maybe", " ", "9.0", " ",
+       "or", " ", 
+      RowBox[{"10.0", ".", " ", "Choose"}], " ", "a", " ", "New", " ", 
+      "notebook", " ", "from", " ", "File", " ", "in", " ", "the", " ", 
+      RowBox[{"menu", ".", " ", "Start"}], " ", "by", " ", "calculating", " ",
+       "1"}], "+", "3"}], ",", 
+    RowBox[{
+     RowBox[{"type", " ", "it", " ", "and", " ", "press", " ", "Shift"}], "+",
+      "Enter"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"1", "+", "3"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{" ", 
+        RowBox[{"Hopefully", " ", "the", " ", "kernel", " ", 
+         RowBox[{"(", 
+          RowBox[{
+          "the", " ", "part", " ", "that", " ", "is", " ", "calculating"}], 
+          ")"}], " ", "gave", " ", "the", " ", "right", " ", 
+         RowBox[{"answer", " ", ":"}]}], ")"}], ".", " ", "Note"}], " ", "In",
+       " ", "and", " ", "Out", " ", "and", " ", "the", " ", "sharp", " ", 
+      "brackets", " ", "to", " ", "the", " ", "very", " ", 
+      RowBox[{"right", ".", " ", "These"}], " ", "brackets", " ", "define", 
+      " ", "the", " ", "so", " ", "called", " ", 
+      RowBox[{"cells", ".", " ", "Next"}], " ", "we", " ", "go", " ", "on", 
+      " ", "by", " ", "calculating", " ", 
+      RowBox[{"3", "/", "7."}], " ", 
+      RowBox[{"Don", "'"}], "t", " ", "forget", " ", "Shift"}], "+", 
+     RowBox[{"Enter", "."}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6362782630376363`*^9, 3.636278268918874*^9}, {
+  3.6368080449750695`*^9, 3.6368083300929227`*^9}, {3.6368083614062366`*^9, 
+  3.636808657936204*^9}, {3.6368102010166473`*^9, 3.6368102083467207`*^9}, {
+  3.636810276386905*^9, 3.6368102774321117`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"3", "/", "7"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Oops", " ", "what", " ", 
+    RowBox[{"happend", "?", " ", "Mathematica"}], " ", "tries", " ", "always",
+     " ", "to", " ", "be", " ", 
+    RowBox[{"exact", "!"}], " ", "If", " ", "you", " ", "what", " ", 
+    "decimals", " ", "you", " ", "write", " ", "instead"}], " ", "*)"}], 
+  " "}]}], "Input",
+ CellChangeTimes->{{3.63627828233496*^9, 3.636278286094584*^9}, {
+  3.636808674737372*^9, 3.636808740064026*^9}}],
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"3", "/", "7"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6362782943782372`*^9, 3.636278300134674*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Commands", " ", "in", " ", "Mathematica", " ", "always", " ", "begins", 
+    " ", "with", " ", "capital", " ", 
+    RowBox[{"letters", ".", " ", "Calculate"}], " ", "sinus", " ", "for", " ", 
+    RowBox[{"\[Pi]", "/", "6."}], " ", "Note", " ", "S", " ", "and", " ", 
+    RowBox[{"P", "."}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Sin", "[", 
+   RowBox[{"Pi", "/", "6"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.636278315313571*^9, 3.6362783216004114`*^9}, {
+  3.636808762637252*^9, 3.6368088771893983`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Guess", " ", "what", " ", "the", " ", "command", " ", "below", " ", 
+    RowBox[{"is", "?", " ", "Calculate"}], " ", 
+    RowBox[{"it", "!"}], " ", "Note", " ", "also", " ", "big", " ", "S", " ", 
+    RowBox[{"here", "."}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Sqrt", "[", "5", "]"}]}]], "Input",
+ CellChangeTimes->{{3.636278365265092*^9, 3.6362783717859335`*^9}, {
+  3.6368089336549635`*^9, 3.6368089936705637`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Time", " ", "to", " ", "run", " ", "a", " ", "little", " ", 
+     RowBox[{"program", ".", " ", "4"}], " ", 
+     RowBox[{"lines", ".", " ", "Note"}]}], " ", ";", " ", 
+    RowBox[{"to", " ", "the", " ", 
+     RowBox[{"right", ".", " ", "Then"}], " ", "you", " ", "avoid", " ", 
+     "that", " ", "the", " ", "lines", " ", "are", " ", "printed", " ", "on", 
+     " ", "the", " ", 
+     RowBox[{"screen", ".", " ", "Note"}], " ", "you", " ", "can", " ", "use",
+      " ", "space", " ", "instead", " ", "of", " ", "star", " ", "for", " ", 
+     RowBox[{"multiplication", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"a", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"b", "=", "7"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"c", "=", 
+     RowBox[{"a", " ", "b"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<c=\>\"", ",", "c"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.6362784161370173`*^9, 3.6362784741537895`*^9}, {
+   3.6368089984006114`*^9, 3.6368090619872475`*^9}, {3.6368093755003853`*^9, 
+   3.636809407593707*^9}, 3.6368103235616074`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "Now", " ", "we", " ", "calculate", " ", "sum", " ", "of", " ", "the",
+          " ", "first", " ", "50", " ", "inverted", " ", 
+         RowBox[{"squares", ".", " ", "1"}]}], " ", "+", " ", 
+        RowBox[{"1", "/", "4"}], " ", "+", " ", 
+        RowBox[{"1", "/", "9"}], " ", "+"}], "..."}], ".", 
+      RowBox[{"+", "1"}]}], "/", "2500."}], " ", "Note", " ", "the", " ", 
+    "command", " ", "Sum", " ", "for", " ", "doing", " ", 
+    RowBox[{"this", ".", " ", "Mark"}], " ", "Sum", " ", "with", " ", "the", 
+    " ", "mouse", " ", "and", " ", "go", " ", "Help", " ", "in", " ", "the", 
+    " ", "menu", " ", "and", " ", "choose", " ", "Find", " ", "Selected", " ", 
+    RowBox[{"Function", ".", " ", "A"}], " ", "new", " ", "box", " ", "pops", 
+    " ", "up", " ", "and", " ", "you", " ", "can", " ", "read", " ", "a", " ",
+     "lot", " ", "about", " ", 
+    RowBox[{"Sum", ".", " ", 
+     RowBox[{"Note", " ", "^", " ", "for"}]}], " ", "powers", " ", "and", " ",
+     "curly", " ", "brackets", " ", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "1", ",", "50"}], "}"}], " ", "which", " ", "means", 
+    " ", "k", " ", "runs", " ", "from", " ", "1", " ", "to", " ", "50.", " ", 
+    "If", " ", "you", " ", "are", " ", "not", " ", "happy", " ", "with", " ", 
+    "the", " ", "output", " ", "try", " ", "NSum"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{"1", "/", 
+     RowBox[{"(", 
+      RowBox[{"k", "^", "2"}], ")"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "1", ",", "50"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.636278503513178*^9, 3.6362785687995963`*^9}, {
+  3.6368091715483446`*^9, 3.6368093565981965`*^9}, {3.6368094159647903`*^9, 
+  3.6368095273459053`*^9}, {3.636809833896973*^9, 3.6368098489881244`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "Finally", " ", "we", " ", "will", " ", "make", " ", "a", " ", "plot", 
+      " ", "that", " ", "we", " ", "will", " ", "export", " ", "to", " ", 
+      "the", " ", "LaTeX"}], "-", 
+     RowBox[{
+     "file", " ", "and", " ", "finally", " ", "it", " ", "will", " ", "come", 
+      " ", "to", " ", "the", " ", 
+      RowBox[{"pdf", ".", " ", "Two"}], " ", "curves"}]}], ",", " ", 
+    RowBox[{"the", " ", "exponential", " ", "and", " ", "cosine"}], ",", " ", 
+    RowBox[{"from", " ", "-", 
+     RowBox[{"3", " ", "to", " ", "1."}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"plot1", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"Exp", "[", "t", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", 
+         RowBox[{"-", "3"}], ",", "1"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", "3"}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"plot2", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"Cos", "[", "t", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", 
+         RowBox[{"-", "3"}], ",", "1"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", "3"}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "In", " ", "fact", " ", "you", " ", "can", " ", "do", " ", "it", " ", 
+     "on", " ", "one", " ", "line", " ", "by", " ", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Cos", "[", "t", "]"}], ",", 
+         RowBox[{"Exp", "[", "t", "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", 
+         RowBox[{"-", "3"}], ",", "1"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", "3"}], "}"}]}]}], "]"}]}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Show", "[", 
+    RowBox[{"plot1", ",", "plot2"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "How", " ", "to", " ", "get", " ", "this", " ", "plot", " ", "into", 
+       " ", "your", " ", "LaTeX"}], "-", 
+      RowBox[{
+       RowBox[{"document", "?", " ", "Do"}], " ", "you", " ", "se", " ", 
+       "the", " ", "bracket", "\[IndentingNewLine]", "to", " ", "the", " ", 
+       "very", " ", "right", " ", "of", " ", "the", " ", 
+       RowBox[{"figure", "?", " ", "Click"}], " ", "on", " ", "that", " ", 
+       RowBox[{"one", ".", " ", "Under"}], " ", "File", " ", "you", " ", 
+       "select", " ", "Save", " ", "Selection", " ", 
+       RowBox[{"As", ".", " ", "In"}], " ", "box", " ", "Save", " ", "As", 
+       " ", "Type", " ", "I", " ", "choose", " ", "EPS", " ", "and", " ", 
+       "give", " ", "it", " ", "a", " ", "name"}]}], ",", " ", 
+     RowBox[{"for", " ", "example", " ", "two_curves"}], ",", " ", 
+     RowBox[{
+      RowBox[{"and", " ", 
+       RowBox[{"Save", ".", " ", "Important"}], " ", "that", " ", "your", " ",
+        "eps", " ", "file", " ", "and", " ", "your", " ", "tex"}], "-", 
+      RowBox[{"file", " ", "are", " ", "in", " ", "the", " ", "same", " ", 
+       RowBox[{"folder", "."}]}]}]}], "*)"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.6362786138214846`*^9, 3.6362787498085566`*^9}, {
+   3.6362787854547853`*^9, 3.6362788145489717`*^9}, 3.636809535526987*^9, {
+   3.636809664230275*^9, 3.6368097884025183`*^9}, {3.6368098896215305`*^9, 
+   3.6368098998526335`*^9}, {3.6368099509991455`*^9, 
+   3.6368100598802347`*^9}, {3.6368101445700827`*^9, 3.636810187044508*^9}, {
+   3.6368104151029944`*^9, 3.6368104449615855`*^9}}]
+},
+WindowSize->{707, 787},
+WindowMargins->{{24, Automatic}, {Automatic, 30}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 2220, 47, 212, "Input"],
+Cell[2780, 69, 524, 11, 72, "Input"],
+Cell[3307, 82, 145, 3, 31, "Input"],
+Cell[3455, 87, 576, 12, 72, "Input"],
+Cell[4034, 101, 487, 10, 72, "Input"],
+Cell[4524, 113, 1219, 26, 152, "Input"],
+Cell[5746, 141, 1920, 40, 172, "Input"],
+Cell[7669, 183, 3856, 92, 312, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

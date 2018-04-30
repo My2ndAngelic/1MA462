@@ -1,0 +1,271 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     11499,        263]
+NotebookOptionsPosition[     11049,        246]
+NotebookOutlinePosition[     11402,        262]
+CellTagsIndexPosition[     11359,        259]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "This", " ", "example", " ", "is", " ", "for", " ", "rule", " ", "30"}], 
+   " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+     "This", " ", "is", " ", "one", " ", "of", " ", "the", " ", "256", " ", 
+      "cellular", " ", "automata", " ", "which", " ", "is", " ", "one", " ", 
+      "dimensional"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"has", " ", "two", " ", "states", " ", 
+        RowBox[{"(", 
+         RowBox[{"black", " ", "or", " ", "white"}], ")"}], " ", "and", " ", 
+        "next", " ", "state", "\[IndentingNewLine]", "in", " ", "a", " ", 
+        "cell", " ", "depends", " ", "only", " ", "on", " ", "previous", " ", 
+        "state", " ", "of", " ", "itself", " ", "and", " ", "the", " ", "2", 
+        " ", "nearlying", " ", 
+        RowBox[{"neighbours", ".", " ", "Think"}], " ", "of", " ", "a", " ", 
+        "long", " ", "chain", " ", "of", " ", 
+        RowBox[{"houses", ".", "\[IndentingNewLine]", "Each"}], " ", "person",
+         " ", "in", " ", "there", " ", "can", " ", "be", " ", "happy", " ", 
+        "or", " ", 
+        RowBox[{"sad", ".", " ", "The"}], " ", "state", " ", "next", " ", 
+        "day", " ", "depends", " ", "on", " ", "your", " ", "mood", " ", 
+        "the", " ", "day", " ", "before", " ", "and", " ", "on", " ", "the", 
+        " ", "mood", "\[IndentingNewLine]", "of", " ", "the", " ", "people", 
+        " ", "next"}], "-", 
+       RowBox[{
+        RowBox[{"doors", ".", " ", "Ther"}], " ", "are", " ", 
+        RowBox[{"2", "^", "8"}]}]}], "=", 
+      RowBox[{
+       RowBox[{
+       "256", " ", "different", " ", "rules", " ", "for", " ", "what", " ", 
+        "can", " ", 
+        RowBox[{"happen", ".", " ", "Most"}], " ", "of", " ", "them", " ", 
+        "are", " ", "boring", " ", "but", " ", "especially", " ", "rule", " ",
+         "30", "\[IndentingNewLine]", "and", " ", "110", " ", "are", " ", 
+        "very", " ", 
+        RowBox[{"interesting", ".", " ", "See"}], " ", 
+        RowBox[{"http", ":"}]}], "//", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"en", ".", "wikipedia", ".", "org"}], "/", "wiki"}], "/", 
+        "Cellular_automaton"}]}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dim", "=", "1000"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dim2", "=", 
+     RowBox[{"dim", "/", "2"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"seed", " ", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{"0", ",", 
+       RowBox[{"{", "dim", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"seed", "[", 
+      RowBox[{"[", 
+       RowBox[{"11", ";;", "30"}], "]"}], "]"}], "=", "1"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"seed", " ", "is", " ", "the", " ", "start", " ", 
+     RowBox[{"state", ".", " ", "We"}], " ", "have", " ", "1000", " ", 
+     "cells", " ", "in", " ", "a", " ", "row", " ", "and", " ", "all", " ", 
+     "are", " ", "white", " ", 
+     RowBox[{"(", "0", ")"}], " ", "execpt", " ", "for", " ", "the", " ", 
+     "one", " ", "in", " ", "the", " ", "middle", " ", 
+     RowBox[{
+      RowBox[{"(", "1", ")"}], " ", ".", "\[IndentingNewLine]", "The"}], " ", 
+     "array", " ", "plot", " ", "below", " ", "shows", " ", "the", " ", 
+     "evolution", " ", "for", " ", "500", " ", 
+     RowBox[{"generations", ".", " ", "Time"}], " ", "is", " ", 
+     RowBox[{"downwards", "."}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"ArrayPlot", "[", 
+      RowBox[{"CellularAutomaton", "[", 
+       RowBox[{"30", ",", "seed", ",", "500"}], "]"}], "]"}], ";"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"Animate", "[", 
+      RowBox[{
+       RowBox[{"ArrayPlot", "[", 
+        RowBox[{"CellularAutomaton", "[", 
+         RowBox[{"30", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", "1", "}"}], ",", "0"}], "}"}], ",", "n"}], "]"}], 
+        "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"n", ",", "1", ",", "Infinity", ",", "1"}], "}"}], ",", 
+       RowBox[{"AnimationRunning", "\[Rule]", "True"}], ",", 
+       RowBox[{"AnimationDirection", "\[Rule]", "ForwardBackward"}]}], "]"}], 
+     ";"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"ArrayPlot", "[", 
+      RowBox[{"CellularAutomaton", "[", 
+       RowBox[{"60", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", "1", "}"}], ",", "0"}], "}"}], ",", "n"}], "]"}], 
+      "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "Infinity", ",", "1"}], "}"}]}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "This", " ", "command", "  ", "will", " ", "give", " ", "the", " ", 
+     "same", " ", 
+     RowBox[{"plot", " ", ":", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{"CellularAutomaton", "[", 
+          RowBox[{"30", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "1", "}"}], ",", "0"}], "}"}], ",", "1000"}], "]"}],
+          "]"}], ".", " ", "CellularAutomaton"}], " ", "is", " ", "thus", " ",
+        "a", " ", "command", " ", "in", " ", "Mathematica"}]}]}], " ", "*)"}],
+    "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+     "If", " ", "you", " ", "want", " ", "to", " ", "see", " ", "Rule", " ", 
+      "30"}], " ", "-", " ", 
+     RowBox[{"The", " ", "Movie", " ", "you", " ", "use", " ", 
+      RowBox[{"instead", ":", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Animate", "[", 
+          RowBox[{
+           RowBox[{"ArrayPlot", "[", 
+            RowBox[{"CellularAutomaton", "[", 
+             RowBox[{"30", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "1", "}"}], ",", "0"}], "}"}], ",", "n"}], "]"}],
+             "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"n", ",", "1", ",", "100", ",", "1"}], "}"}], ",", 
+           RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "]"}], ".", 
+         "\[IndentingNewLine]", "One"}], " ", "black", " ", "cell", " ", "to",
+         " ", "start", " ", "with", " ", "also", " ", 
+        RowBox[{"here", ".", " ", "One"}], " ", "iteration", " ", "is", " ", 
+        "already", " ", "done", " ", "so", " ", "we", " ", "have", " ", "a", 
+        " ", "black", " ", "T", " ", "upside", " ", 
+        RowBox[{"down", ".", " ", "100"}], " ", "iterations", " ", "with", 
+        " ", "step", " ", "1."}]}]}]}], "*)"}]}]}]], "Input",
+ CellChangeTimes->{{3.5629467791397533`*^9, 3.5629468741099615`*^9}, {
+   3.562947323265937*^9, 3.5629473296076975`*^9}, {3.562947377014701*^9, 
+   3.5629473844342484`*^9}, {3.562947475593152*^9, 3.5629476445245333`*^9}, {
+   3.5629476785294914`*^9, 3.562947682387656*^9}, {3.5629477471798306`*^9, 
+   3.56294776900111*^9}, {3.5629478142369204`*^9, 3.562947817204739*^9}, {
+   3.574084811177898*^9, 3.5740849899371305`*^9}, {3.5740850350014076`*^9, 
+   3.574085291904196*^9}, {3.5740853434498663`*^9, 3.5740855900403585`*^9}, {
+   3.5740856257940807`*^9, 3.5740856484584103`*^9}, {3.574085702003085*^9, 
+   3.574085706454728*^9}, {3.574085783219489*^9, 3.574085783610427*^9}, {
+   3.574085819326477*^9, 3.574085919828689*^9}, {3.574085951854289*^9, 
+   3.5740860498655005`*^9}, {3.5740860811191*^9, 3.5740861510959105`*^9}, 
+   3.5740861871313114`*^9, {3.5740862734537544`*^9, 3.574086282017241*^9}, {
+   3.605505932875717*^9, 3.6055059594582877`*^9}, {3.6061124455436077`*^9, 
+   3.6061124824844074`*^9}, {3.6061127731592073`*^9, 
+   3.6061127775428076`*^9}, {3.730631436457782*^9, 3.730631450301104*^9}, {
+   3.73184046999666*^9, 3.731840501784214*^9}, {3.7318405492973003`*^9, 
+   3.731840642746876*^9}, {3.7318406853424063`*^9, 3.731840688885041*^9}, {
+   3.731840788032323*^9, 3.73184084018723*^9}, {3.7318408801132917`*^9, 
+   3.731840897156762*^9}, {3.731840981179377*^9, 3.7318410695032883`*^9}, {
+   3.731841099512054*^9, 3.7318411319602203`*^9}, {3.731841162677231*^9, 
+   3.731841163462229*^9}, {3.731841205310796*^9, 3.731841234249982*^9}, {
+   3.731841287274721*^9, 3.731841289770974*^9}, {3.7318413226390553`*^9, 
+   3.731841356248914*^9}, {3.731841421239192*^9, 3.731841426300744*^9}, {
+   3.73184145731915*^9, 3.7318415738332157`*^9}, {3.731841627579525*^9, 
+   3.73184164041534*^9}, {3.7318418404181547`*^9, 3.7318418408155603`*^9}, {
+   3.7318418797956038`*^9, 3.7318419157260637`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"e1224654-bd5d-4ac6-b481-f36a23e0e862"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 58, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 
+      DirectedInfinity[1], 1}}, Typeset`size$$ = {360., {177., 182.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`n$17735$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$17735$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+        CellularAutomaton[60, {{1}, 0}, $CellContext`n$$]], 
+      "Specifications" :> {{$CellContext`n$$, 1, 
+         DirectedInfinity[1], 1}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {219., 225.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.7318419163168573`*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"67fdd629-c061-486e-bdca-9777e09f5077"]
+}, Open  ]]
+},
+WindowSize->{1280, 752},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 8733, 184, 430, "Input",ExpressionUUID->"e1224654-bd5d-4ac6-b481-f36a23e0e862"],
+Cell[9303, 208, 1730, 35, 497, "Output",ExpressionUUID->"67fdd629-c061-486e-bdca-9777e09f5077"]
+}, Open  ]]
+}
+]
+*)
+
