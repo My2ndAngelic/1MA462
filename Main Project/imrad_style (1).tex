@@ -25,15 +25,23 @@
 \section{Problem 1}
 Short summarization: How many regions can \(n\) lines creates, assumes that there is no parallel nor concurrency.
 
-Proposed solution: With the given condition, any new drawn line must cross all existing ones at \(n\) points. That means the line must also cross \(n\) regions enclosed by a given number of lines since they are all line up. 
+Proposed solution: With the given condition, any new drawn line must cross all existing ones at \(n\) points. That means the line must also cross \(n\) regions enclosed by a given number of lines.
 
-Equation found: Let a be the number of regions created by \(n\) lines. We know that:
+In another way, we can also trace back the pattern with recursion relationship by taking a guess. With \(0\) lines, we can assure that there is only \(1\) plane. Now, a new line is draw and divides the plane into two half planes. In this case, we might call these two half planes regions. Now, another non-parallel to the previous one cut it at a point and divide 2 regions into 4. 
+
+Starting from the third line (not parallel nor concurrent to those two), the pattern is shown. As it starts from the left region, crosses the middle one and ends in the right region. The reason here is that since it is non-parallel nor concurrent to any of those two lines, the third line must cross three neighboring regions and divides those 3 into ... %wriing here
+
+Equation: Let a be the number of regions created by \(n\) lines. We know that:
 \[a_{n} = a_{n-1} + n + 1, \ n>1, \ n \in \mathds{Z} \]
 
 Solving by Mathematica gives us: 
-\
+\[a_{n} = \frac{2}{3}\]
 
-\section{Discussion}
+\section{Problem 2}
+
+\section{Problem 3}
+
+\section{Problem 4}
 
 \begin{thebibliography}{99}
  
