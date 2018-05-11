@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     15842,        331]
-NotebookOptionsPosition[     15168,        310]
-NotebookOutlinePosition[     15661,        329]
-CellTagsIndexPosition[     15618,        326]
+NotebookDataLength[     11937,        249]
+NotebookOptionsPosition[     11359,        229]
+NotebookOutlinePosition[     11852,        248]
+CellTagsIndexPosition[     11809,        245]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,93 +21,12 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell[BoxData[{
- RowBox[{
-  RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}], "\[IndentingNewLine]", 
-  RowBox[{"(*", " ", 
-   RowBox[{
-    RowBox[{
-     RowBox[{
-     "After", " ", "1", "D", " ", "CA", " ", "we", " ", "turn", " ", "to", 
-      " ", "two", " ", "dimensional", " ", 
-      RowBox[{"CA", ".", " ", "Still"}], " ", "each", " ", "cell", " ", "can",
-       " ", "have", " ", "two", " ", 
-      RowBox[{"states", ".", " ", "BUT"}], "\[IndentingNewLine]", "there", 
-      " ", "are", " ", "now", " ", "8", " ", 
-      RowBox[{"neighbours", ".", " ", "3"}], " ", "above", " ", "and", " ", 
-      "below", " ", "and", " ", "one", " ", "to", " ", "the", " ", "right", 
-      " ", "and", " ", "one", " ", "to", " ", "the", " ", 
-      RowBox[{"left", ".", " ", "So"}], " ", "including", " ", "the", " ", 
-      "\[IndentingNewLine]", "middle", " ", "cell", " ", "there", " ", "are", 
-      " ", 
-      RowBox[{"2", "^", "9"}]}], "=", 
-     RowBox[{"512", " ", "states", " ", "for", " ", "these", " ", 
-      RowBox[{"cells", ".", " ", "Can"}], " ", "you", " ", "tell", " ", "how",
-       " ", "many", " ", "CA", " ", "rules", " ", "we", " ", "then", " ", 
-      RowBox[{"have", "?", "\[IndentingNewLine]", "The"}], " ", "most", " ", 
-      "famous", " ", "of", " ", "these", " ", "is", " ", "called", " ", 
-      "Game", " ", "of", " ", "Life"}]}], ",", " ", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"http", ":"}], "//", 
-      RowBox[{
-       RowBox[{
-        RowBox[{
-         RowBox[{"en", ".", "wikipedia", ".", "org"}], "/", "wiki"}], "/", 
-        "Conway"}], "%27", "s_Game", "_of", "_Life", " ", 
-       "\[IndentingNewLine]", "and", " ", 
-       RowBox[{"http", ":"}]}]}], "//", 
-     RowBox[{
-      RowBox[{"mathworld", ".", "wolfram", ".", "com"}], "/", 
-      RowBox[{"GameofLife", ".", "html"}]}]}]}], " ", "*)"}], 
-  "\[IndentingNewLine]", 
-  RowBox[{"(*", " ", 
-   RowBox[{
-    RowBox[{
-    "This", " ", "example", " ", "is", " ", "for", " ", "rule", " ", "746.", 
-     " ", "I", " ", "call", " ", "it", " ", "circular", " ", 
-     RowBox[{"growth", ".", " ", "The"}], " ", "birth", " ", "rule", " ", 
-     RowBox[{"(", 
-      RowBox[{"white", "->", "black"}], ")"}], " ", "is", " ", "exactly", " ",
-      "3", " ", "living", " ", 
-     RowBox[{"neighbours", ".", "\[IndentingNewLine]", "Survival"}], " ", 
-     RowBox[{"(", 
-      RowBox[{"black", "\[Rule]", "black"}], ")"}], " ", "if", " ", "no", " ",
-      "more", " ", "than", " ", "4", " ", "neighbours", " ", "are", " ", 
-     RowBox[{"alive", ".", " ", "Death"}], " ", 
-     RowBox[{"(", " ", 
-      RowBox[{"black", "\[Rule]", "white"}], ")"}], " ", "if", " ", "there", 
-     " ", "are", " ", "5"}], "-", 
-    RowBox[{
-    "8", " ", "living", " ", "neighbours", "\[IndentingNewLine]", "in", " ", 
-     "the", " ", "previous", " ", 
-     RowBox[{"generation", ".", " ", "Game"}], " ", "of", " ", "Life", " ", 
-     "is", " ", "rule", " ", "224.", " ", "Same", " ", "birth", " ", 
-     "condition", " ", "as", " ", "for", " ", "Circular", " ", "Growth", " ", 
-     "but", " ", "death", " ", "happends", " ", "due", " ", "to", " ", 
-     "lonliness", "\[IndentingNewLine]", 
-     RowBox[{"(", 
-      RowBox[{
-      "0", " ", "or", " ", "1", " ", "living", " ", "cell", " ", "next", " ", 
-       "to", " ", "the", " ", "cell"}], ")"}], " ", "or", " ", "over", " ", 
-     "population", " ", 
-     RowBox[{
-      RowBox[{"(", 
-       RowBox[{"4", "-", 
-        RowBox[{
-        "8", " ", "living", " ", "cells", " ", "around", " ", "the", " ", 
-         "middle", " ", "cell"}]}], ")"}], ".", " ", "As"}], " ", "in", " ", 
-     "our", " ", 
-     RowBox[{"world", "!"}], " ", "\[IndentingNewLine]", "If", " ", "you", 
-     " ", "write", " ", "746", " ", "and", " ", "224", " ", "in", " ", "base",
-      " ", "2", " ", "I", " ", "hope", " ", "you", " ", "can", " ", "figure", 
-     " ", "out", " ", "how", " ", "this", " ", "rule", " ", "numbers", " ", 
-     "are", " ", 
-     RowBox[{"obtained", "."}]}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"CircularGrowth", "=", 
     RowBox[{"{", 
-     RowBox[{"756", ",", 
+     RowBox[{"174080", ",", 
       RowBox[{"{", 
        RowBox[{"2", ",", 
         RowBox[{"{", 
@@ -126,74 +45,67 @@ Cell[BoxData[{
    "This", " ", "list", " ", "above", " ", "specifies", " ", "the", " ", "2", 
     "D", " ", "CA"}], "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"seed", " ", "=", 
-   RowBox[{"Table", "[", 
-    RowBox[{"0", ",", 
-     RowBox[{"{", "200", "}"}], ",", 
-     RowBox[{"{", "200", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"seed", " ", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{"0", ",", 
+      RowBox[{"{", "200", "}"}], ",", 
+      RowBox[{"{", "200", "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", " ", "=", " ", "37000"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m", " ", "=", "1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{
-    RowBox[{"seed", "[", 
-     RowBox[{"[", 
-      RowBox[{
-       RowBox[{"RandomInteger", "[", 
-        RowBox[{"{", 
-         RowBox[{"0", ",", "100"}], "}"}], "]"}], ",", "100"}], "]"}], "]"}], 
-    "=", "1"}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  RowBox[{"(*", " ", 
-   RowBox[{
-    RowBox[{"seed", " ", "is", " ", "the", " ", "input", " ", 
-     RowBox[{"matrix", ".", " ", "Here"}], " ", "we", " ", "start", " ", 
-     "with", " ", "a", " ", "\"\<worm\>\""}], ",", " ", 
-    RowBox[{"or", " ", "better", " ", "seed"}], ",", " ", 
-    RowBox[{
-     RowBox[{
-     "with", " ", "5", " ", "cells", " ", "but", " ", "the", " ", "next", " ",
-       "lowest", " ", "is", " ", "dead", " ", 
-      RowBox[{"(", "ill", ")"}], " ", "to", " ", "begin", " ", 
-      RowBox[{"with", ".", "\[IndentingNewLine]", "200"}], " ", 
-      RowBox[{"iterations", ".", " ", "In"}], " ", "fact", " ", "something", 
-      " ", "shocking", " ", "happends", " ", "after", " ", "3000", " ", 
-      "iterations", " ", "for", " ", "this", " ", 
-      RowBox[{"seed", ".", " ", "To"}], " ", "see", " ", "it", " ", "you", 
-      " ", "have", " ", "to", " ", "have", " ", "a", " ", "big", " ", 
-      "matrix", " ", "and", "\[IndentingNewLine]", "it", " ", "takens", " ", 
-      "around", " ", "25", " ", "minutes", " ", "one", " ", "my", " ", 
-      RowBox[{"machine", ".", " ", "For"}], " ", "five", " ", "healthy", " ", 
-      "cells", " ", "in", " ", "a", " ", "row", " ", "this", " ", "effect", 
-      " ", "has", " ", "not", " ", "been", " ", 
-      RowBox[{"seen", ".", " ", "It"}], " ", "seems", " ", "like", 
-      "\[IndentingNewLine]", "radius", " ", "of", " ", "ball", " ", "is"}], 
-     " ", "=", 
-     RowBox[{"C", " ", "*", " ", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{"number", " ", "of", " ", "iterations"}], ")"}], ".", " ", 
-       "Can"}], " ", "you", " ", "estimate", " ", 
-      RowBox[{"C", "?"}]}]}]}], "*)"}], "\[IndentingNewLine]", 
-  RowBox[{"(*", 
-   RowBox[{"ArrayPlot", "[", 
-    RowBox[{"CellularAutomaton", "[", 
-     RowBox[{"CircularGrowth", ",", "seed", ",", 
-      RowBox[{"{", 
-       RowBox[{"{", 
-        RowBox[{"{", "200", "}"}], "}"}], "}"}]}], "]"}], "]"}], 
-   "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{"Animate", "[", 
+   RowBox[{"n", " ", "=", " ", "1"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{
-   RowBox[{"ArrayPlot", "[", 
+   RowBox[{"For", "[", 
     RowBox[{
-     RowBox[{"CellularAutomaton", "[", 
-      RowBox[{"CircularGrowth", ",", "seed", ",", 
-       RowBox[{"{", 
+     RowBox[{"i", "=", "0"}], ",", 
+     RowBox[{"i", "<", "k"}], ",", 
+     RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"While", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"seed", "[", 
+          RowBox[{"[", 
+           RowBox[{"m", ",", "n"}], "]"}], "]"}], "\[Equal]", "1"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"m", " ", "=", " ", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "200"}], "}"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"n", " ", "=", " ", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "200"}], "}"}], "]"}]}], ";"}]}], 
+       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"seed", "[", 
+        RowBox[{"[", 
+         RowBox[{"m", ",", "n"}], "]"}], "]"}], "=", "1"}], ";"}]}], 
+    "\[IndentingNewLine]", "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"ArrayPlot", "[", 
+     RowBox[{
+      RowBox[{"CellularAutomaton", "[", 
+       RowBox[{"CircularGrowth", ",", "seed", ",", 
         RowBox[{"{", 
-         RowBox[{"{", "n", "}"}], "}"}], "}"}]}], "]"}], ",", 
-     RowBox[{"Mesh", "\[Rule]", "False"}]}], "]"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"n", ",", "0", ",", "200", ",", "1"}], "}"}], ",", 
-   RowBox[{"AnimationRate", " ", "\[Rule]", "10"}], ",", " ", 
-   RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "]"}]}], "Input",
+         RowBox[{"{", 
+          RowBox[{"{", "n", "}"}], "}"}], "}"}]}], "]"}], ",", 
+      RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "0", ",", "1000", ",", "1"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
  CellChangeTimes->{{3.558448174208222*^9, 3.558448284047344*^9}, {
    3.558448329472584*^9, 3.558448330998032*^9}, {3.558448363393396*^9, 
    3.558448424650425*^9}, {3.55844899689117*^9, 3.558449112579771*^9}, {
@@ -250,63 +162,70 @@ Cell[BoxData[{
    3.734113670282806*^9, 3.734113716333548*^9}, {3.73416336580707*^9, 
    3.7341633884681177`*^9}, {3.734164838867757*^9, 3.734164860553625*^9}, {
    3.734949094718224*^9, 3.734949125663698*^9}, {3.734949227612409*^9, 
-   3.73494930790593*^9}, {3.734950637167843*^9, 3.7349506377480516`*^9}},
- CellLabel->
-  "In[275]:=",ExpressionUUID->"6e2c2875-d003-4a9e-9f0f-8c49fb6970ed"],
+   3.73494930790593*^9}, {3.734950637167843*^9, 3.7349506377480516`*^9}, {
+   3.734958971909628*^9, 3.734958995624393*^9}, {3.7349590257977533`*^9, 
+   3.73495906657213*^9}, {3.734972899767647*^9, 3.7349729007408447`*^9}, {
+   3.73502738471537*^9, 3.7350273941215076`*^9}, {3.735027596832142*^9, 
+   3.73502763318014*^9}, {3.735027670140102*^9, 3.735027692145503*^9}, {
+   3.735027833801797*^9, 3.735027852503119*^9}, {3.735028079440997*^9, 
+   3.735028083982286*^9}, {3.735029405461001*^9, 3.735029406662245*^9}, {
+   3.735030564123495*^9, 3.735030564769699*^9}, {3.7350305953894444`*^9, 
+   3.735030611680574*^9}, {3.735030660383951*^9, 3.7350306812674437`*^9}, {
+   3.735034888800611*^9, 3.735034932430344*^9}, {3.735035024471633*^9, 
+   3.7350352238566008`*^9}, {3.735035574483266*^9, 3.7350357900625134`*^9}, {
+   3.735035836128561*^9, 3.735035836669237*^9}, {3.735035891582903*^9, 
+   3.735035924394541*^9}, {3.735035956085395*^9, 3.735035958425264*^9}, {
+   3.735036114665978*^9, 3.7350361152390003`*^9}, {3.7350366034981747`*^9, 
+   3.735036949316597*^9}, {3.735037024939234*^9, 3.7350370304788*^9}, {
+   3.7350370953969584`*^9, 3.735037100409584*^9}, 3.735037349059973*^9, {
+   3.735037384449552*^9, 3.735037394446116*^9}, {3.735037656126994*^9, 
+   3.735037691789125*^9}},
+ CellLabel->"In[57]:=",ExpressionUUID->"6e2c2875-d003-4a9e-9f0f-8c49fb6970ed"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`n$$ = 31, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`n$$ = 0, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`n$$], 0, 200, 1}}, Typeset`size$$ = {
+      Hold[$CellContext`n$$], 0, 1000, 1}}, Typeset`size$$ = {
     360., {177., 182.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`n$67656$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`n$26730$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`n$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`n$$, $CellContext`n$67656$$, 0]}, 
+        Hold[$CellContext`n$$, $CellContext`n$26730$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
         CellularAutomaton[$CellContext`CircularGrowth, $CellContext`seed, \
-{{{$CellContext`n$$}}}], Mesh -> False], 
-      "Specifications" :> {{$CellContext`n$$, 0, 200, 1, AnimationRate -> 10, 
-         AnimationRunning -> False, 
-         AppearanceElements -> {
-          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
-           "DirectionButton"}}}, 
-      "Options" :> {
-       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
-        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
-        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
-     ImageSizeCache->{405., {214., 220.}},
+{{{$CellContext`n$$}}}], ImageSize -> Medium], 
+      "Specifications" :> {{$CellContext`n$$, 0, 1000, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {222., 228.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
     SynchronousInitialization->True,
     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
     UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Animate",
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.7341633707293167`*^9, 3.734163389442247*^9}, {
-  3.7341648407775993`*^9, 3.734164861490178*^9}, {3.73494909878988*^9, 
-  3.73494912621174*^9}, {3.734949240010495*^9, 3.734949308842106*^9}, {
-  3.734950633404491*^9, 3.7349506382896433`*^9}},
- CellLabel->
-  "Out[279]=",ExpressionUUID->"3d5d9c13-6f15-413c-b3d6-5444cda34eee"]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.558689196159156*^9, 
-  3.558689222017703*^9}},ExpressionUUID->"65ac5a58-a49e-4a7c-b8eb-\
-37568556f671"]
+ CellChangeTimes->{{3.735035664552704*^9, 3.735035675052389*^9}, {
+   3.735035730707374*^9, 3.735035790685975*^9}, {3.735035824221779*^9, 
+   3.735035838336329*^9}, {3.735035893084324*^9, 3.735035924931274*^9}, {
+   3.735035958877877*^9, 3.7350359620912943`*^9}, 3.735036115926437*^9, {
+   3.735036633105894*^9, 3.735036704926489*^9}, {3.735036846195957*^9, 
+   3.7350369604740143`*^9}, {3.735037026725039*^9, 3.7350370609219093`*^9}, {
+   3.735037096996936*^9, 3.735037102539277*^9}, {3.735037350765313*^9, 
+   3.735037415812894*^9}, {3.7350376645789413`*^9, 3.735037695101553*^9}},
+ CellLabel->"Out[64]=",ExpressionUUID->"e3135d72-3e94-4a07-9a42-9d1296fefcc0"]
+}, Open  ]]
 },
 WindowSize->{1280, 752},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -329,10 +248,9 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 12059, 232, 493, "Input",ExpressionUUID->"6e2c2875-d003-4a9e-9f0f-8c49fb6970ed"],
-Cell[12641, 256, 2356, 46, 453, "Output",ExpressionUUID->"3d5d9c13-6f15-413c-b3d6-5444cda34eee"]
-}, Open  ]],
-Cell[15012, 305, 152, 3, 30, "Input",ExpressionUUID->"65ac5a58-a49e-4a7c-b8eb-37568556f671"]
+Cell[579, 22, 8469, 160, 451, "Input",ExpressionUUID->"6e2c2875-d003-4a9e-9f0f-8c49fb6970ed"],
+Cell[9051, 184, 2292, 42, 527, "Output",ExpressionUUID->"e3135d72-3e94-4a07-9a42-9d1296fefcc0"]
+}, Open  ]]
 }
 ]
 *)
